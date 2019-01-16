@@ -10,5 +10,11 @@
 <body>
    <p> <%=pokemonKey.name%> </p><br>
     <img src='<%=pokemonKey.img%>'> 
+    <br>
+    <a href='/pokemon'><button type="submit">Back to Pokemon List</button></a>
+            
+    <form method='POST' action="/pokemon/<%=i%>/?_method=DELETE">
+        <button type="submit">Delete <%=pokemonKey.name%></button>
+    </form>
 </body>
 </html>

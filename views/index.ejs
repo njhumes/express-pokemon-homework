@@ -10,8 +10,14 @@
 <body>
     <ul class='pokemon'>
     <% for(let i = 0; i < pokemonKey.length; i++){ %>
-        <li style='color: green; font-size: 22px;'><a style='text-decoration: none' href='http://localhost:3000/pokemon/<%=i%>'><%=pokemonKey[i].name%></a></li>
+        <li style='color: green; font-size: 22px;'><a style='text-decoration: none' href='/pokemon/<%=i%>'><%=pokemonKey[i].name%></a></li>
+        <a href='/pokemon/<%=i%>/edit'>Edit <%=pokemonKey[i].name%></a>
+        <form method="POST" action="/pokemon/<%=i%>/?_method=DELETE">
+                <button type="submit">Delete <%=pokemonKey[i].name%></button>
+        </form>
    <% } %>
+   <br><br>
+   <a href ='/pokemon/new'>Create New Pokemon</a>
    </ul>
 </body>
 </html>
