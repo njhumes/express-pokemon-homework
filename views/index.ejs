@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><Page Title></title>
+    <!--<link rel='stylesheet' href='style.css'>-->
+
 </head>
 <body>
-    <%=JSON.stringify(pokemonKey); %>
-    <ul>
+    <ul class='pokemon'>
     <% for(let i = 0; i < pokemonKey.length; i++){ %>
-        <li><a href='http://localhost:3000/pokemon/<%=i%>'><%=pokemonKey[i].name%></a></li>
+        <li style='color: green; font-size: 22px;'><a style='text-decoration: none' href='http://localhost:3000/pokemon/<%=i%>'><%=pokemonKey[i].name%></a></li>
    <% } %>
    </ul>
 </body>

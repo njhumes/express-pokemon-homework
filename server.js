@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const PokemonList = require('./models/pokemon');
 
+app.use(express.static('public'));
+
 
 app.get('/pokemon', (req, res) => {
     res.render('index.ejs', {
