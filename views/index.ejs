@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><Page Title></title>
+</head>
+<body>
+    <%=JSON.stringify(pokemonKey); %>
+    <ul>
+    <% for(let i = 0; i < pokemonKey.length; i++){ %>
+        <li><a href='http://localhost:3000/pokemon/<%=i%>'><%=pokemonKey[i].name%></a></li>
+   <% } %>
+   </ul>
+</body>
+</html>
